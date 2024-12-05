@@ -1,0 +1,81 @@
+.home {
+  padding: 2rem;
+  width: 100%;
+}
+
+.home h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.home h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  border-radius: 2px;
+}
+
+.requests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.request-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e8ed;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.request-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.request-card h3 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.request-card p {
+  color: #666;
+  margin: 0.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.request-card p:before {
+  content: '•';
+  color: #2575fc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .requests-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
